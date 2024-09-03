@@ -29,7 +29,7 @@
 
             <asp:Button ID="Button1" runat="server" Text="Register" class="frm-submit" OnClick="Button1_Click" />
 
-			<a href="page-login.html" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
+			<a href="login.aspx" class="a-link"><i class="fa fa-sign-in"></i>Already have account? Login.</a>
 		</div>
 	</form>
 </div>
