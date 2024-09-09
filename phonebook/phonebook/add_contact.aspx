@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/user.master" AutoEventWireup="true" CodeFile="add_contact.aspx.cs" Inherits="add_contact" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="c1" Runat="Server">
+<asp:Content  ContentPlaceHolderID="c1" Runat="Server">
 
     
      <div class="row small-spacing">
@@ -9,41 +9,41 @@
                     <h4 class="box-title">Create new contact</h4>
 
                     <div class="card-content">
-                        <form>
+                       
                             <div class="form-group">
-                                <label for="exampleInputEmail1">First Name</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1"
-                                       placeholder="Enter First Name">
+                                <label for="firstname">First Name</label>
+
+                               
+                                
+                                <asp:TextBox ID="firstname" runat="server"  class="form-control" placeholder="Enter First Name"></asp:TextBox>
+                            
+                            
                             </div>
+                            
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Last Name</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Enter Last Name">
+                                <label for="lastname">Last Name</label>
+                                 <asp:TextBox ID="lastname" runat="server"  class="form-control" placeholder="Enter Last Name"></asp:TextBox>
                             </div>
 
 
                              <div class="form-group">
-                                <label for="exampleInputPassword1">Contact No</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Enter Contact No">
+                                <label for="contactno">Contact No</label>
+                                 <asp:TextBox ID="TextBox1" runat="server"  class="form-control" placeholder="Enter First Name"></asp:TextBox>
                             </div>
 
                              <div class="form-group">
-                                <label for="exampleInputPassword1">Email</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Enter Email">
+                                <label for="email">Email</label>
+                                 <asp:TextBox ID="email" runat="server"  class="form-control" placeholder="Enter Email"></asp:TextBox>
                             </div>
 
                              <div class="form-group">
-                                <label for="exampleInputPassword1">Resident adress</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Enter Resident Adress">
+                                <label for="resident_adress">Resident adress</label>
+                                 <asp:TextBox ID="resident" runat="server"  class="form-control" placeholder="Enter Resident adress"></asp:TextBox>
                             </div>
 
                              <div class="form-group">
-                                <label for="exampleInputPassword1">City</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1"
-                                       placeholder="Enter City">
+                                <label for="city">City</label>
+                                 <asp:TextBox ID="city" runat="server"  class="form-control" placeholder="Enter City"></asp:TextBox>
                             </div>
 
                           
@@ -57,9 +57,9 @@
 
 
 
-                            <button type="submit" class="btn btn-primary btn-sm waves-effect waves-light">Add
-                            </button>
-                        </form>
+                         
+                        <asp:Button Text="Add contact" ID="button1" runat="server" class="btn btn-primary btn-sm waves-effect waves-light" OnClick="button1_Click" /></asp:Button >
+                   
                     </div>
 
                 </div>
@@ -73,4 +73,3 @@
 
 
 </asp:Content>
-

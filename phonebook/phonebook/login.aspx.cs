@@ -52,7 +52,7 @@ public partial class login : System.Web.UI.Page
             {
 
                 Session["username"] = username.Text;
-                Response.Redirect("mycontact.aspx");
+                Response.Redirect("add_contact.aspx");
             }
         }
     }

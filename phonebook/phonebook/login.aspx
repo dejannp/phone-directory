@@ -25,6 +25,7 @@
 			<div class="frm-input"><asp:TextBox ID="password" runat="server" class="frm-inp" placeholder="Password" ></asp:TextBox><i class="fa fa-lock frm-ico"></i></div>
 			 
 <asp:Button ID="Button1" runat="server" Text="Login" class="frm-submit" OnClick="Button1_Click"  /></button>
+            <a href="register.aspx" class="a-link"><i class="fa fa-sign-in"></i>Don' t  have an account? Register</a>
 		</div>
 	</form>
 
