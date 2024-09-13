@@ -45,7 +45,7 @@
             <h1 class="page-title">Telephone Directory</h1>
         </div>
         <div class="pull-right">
-            <a href="#" class="ico-item fa fa-power-off js__logout"></a>
+            <a href="register.aspx" class="ico-item fa fa-power-off js__logout"></a>
         </div>
     </div>
 

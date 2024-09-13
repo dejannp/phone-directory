@@ -29,13 +29,35 @@ public partial class mycontact : System.Web.UI.Page
 
         SqlCommand cmd = con.CreateCommand();
         cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "SELECT firstname,lastname,contactno,email,resident_adress,city FROM add_contact where username = '"+Session["username"].ToString()+"'"; 
+        cmd.CommandText = "SELECT id, firstname,lastname,contactno,email,resident_adress,city FROM add_contact where username = '"+Session["username"].ToString()+"'"; 
         cmd.ExecuteNonQuery();
         DataTable dt = new DataTable();
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         da.Fill(dt);
         Repeater1.DataSource = dt;
         Repeater1.DataBind();
+
+
+
+    }
+
+    protected void button1_Click(object sender, EventArgs e)
+    {
+
+
+
+
+
+        SqlCommand cmd = con.CreateCommand();
+        cmd.CommandType = CommandType.Text;
+        cmd.CommandText = "SELECT id,  firstname,lastname,contactno,email,resident_adress,city FROM add_contact where username = '" + Session["username"].ToString() + "' AND firstname='"+search.Text+"+%'";
+        cmd.ExecuteNonQuery();
+        DataTable dt = new DataTable();
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        da.Fill(dt);
+        Repeater1.DataSource = dt;
+        Repeater1.DataBind();
+
 
 
 
