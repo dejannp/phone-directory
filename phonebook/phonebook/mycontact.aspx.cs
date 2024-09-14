@@ -49,13 +49,16 @@ public partial class mycontact : System.Web.UI.Page
 
 
         SqlCommand cmd = con.CreateCommand();
-        cmd.CommandType = CommandType.Text;
-        cmd.CommandText = "SELECT id,  firstname,lastname,contactno,email,resident_adress,city FROM add_contact where username = '" + Session["username"].ToString() + "' AND firstname='"+search.Text+"+%'";
+        cmd.CommandText = "SELECT id, firstname, lastname, contactno, email, resident_adress, city FROM add_contact WHERE username = @username AND firstname LIKE @search";
+        cmd.Parameters.AddWithValue("@username", Session["username"].ToString());
+        cmd.Parameters.AddWithValue("@search", "%" + search.Text + "%");
         cmd.ExecuteNonQuery();
-        DataTable dt = new DataTable();
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
-        da.Fill(dt);
-        Repeater1.DataSource = dt;
+        DataTable dt1 = new DataTable();
+        SqlDataAdapter da1 = new SqlDataAdapter(cmd);
+        da1.Fill(dt1);
+
+        
+        Repeater1.DataSource = dt1;
         Repeater1.DataBind();
 
 

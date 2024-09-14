@@ -46,7 +46,7 @@
             <h1 class="page-title">Telephone Directory</h1>
           
         </div>
-         <form id="f1" runat="server">
+<form id="f1" runat="server">
         <div class="pull-right">
            
             <br />
@@ -69,7 +69,7 @@
 
                        
                             <asp:ContentPlaceHolder ID="c1" runat="server"></asp:ContentPlaceHolder>
-                        </form>
+</form>
 
 
 
