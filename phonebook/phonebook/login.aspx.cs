@@ -36,14 +36,14 @@ public partial class login : System.Web.UI.Page
 
         if (username.Text == "" | password.Text == "")
         {
-            Response.Write("<script>alert('Sva polja moraju biti popunjena!');</script>");
+            Response.Write("<script>alert('All fields must be filled');</script>");
         }
             else {
            
 
             if (i == 0)
             {
-                Response.Write("<script>alert('Korisnicko ime nije pronadjeno u bazi podataka');</script>");
+                Response.Write("<script>alert('Username not found in database');</script>");
 
             }
 

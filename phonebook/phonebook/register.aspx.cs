@@ -40,7 +40,7 @@ public partial class register : System.Web.UI.Page
 
         if (username.Text == "" | firstname.Text == "" | lastname.Text == "" | email.Text == "" | contact.Text == "" | password.Text == "")
         {
-            Response.Write("<script>alert('Sva polja moraju biti popunjena');</script>");
+            Response.Write("<script>alert('All fields must be filled');</script>");
         }
 
         else {
@@ -51,14 +51,14 @@ public partial class register : System.Web.UI.Page
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = "insert into registration (firstname,lastname,email,username,password,contact) values ('" + firstname.Text + "','" + lastname.Text + "','" + email.Text + "','" + username.Text + "','" + password.Text + "','" + contact.Text + "') ";
                 cmd.ExecuteNonQuery();
-                Response.Write("<script>alert('Registracija uspješna');</script>");
+                Response.Write("<script>alert('Registration succesful');</script>");
 
             }
 
             else
             {
 
-                Response.Write("<script>alert('Korisničko ime je već registrovano!');</script>");
+                Response.Write("<script>alert('Username already registered!');</script>");
             }
 
         }

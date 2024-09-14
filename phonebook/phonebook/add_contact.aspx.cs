@@ -32,7 +32,7 @@ public partial class add_contact : System.Web.UI.Page
     {
         if (firstname.Text == "" | lastname.Text == "" | TextBox1.Text == "" | email.Text=="" | resident.Text == "" | city.Text == "")
         {
-            Response.Write("<script>alert('Sva polja moraju biti popunjena!')</script>");
+            Response.Write("<script>alert('All fields must be filled')</script>");
         }
         else {
 
@@ -43,7 +43,7 @@ public partial class add_contact : System.Web.UI.Page
 
             cmd1.ExecuteNonQuery();
 
-            Response.Write("<script>alert('Novi kontakt uspješno unesen')</script>");
+            Response.Write("<script>alert('New contact added succesfuly!')</script>");
 
         }
 
